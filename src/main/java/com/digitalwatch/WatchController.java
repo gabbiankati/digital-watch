@@ -18,7 +18,7 @@ public class WatchController {
     public void initialize() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             LocalDateTime time = LocalDateTime.now();
-            DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+            DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern(" HH:mm:ss dd-MM-yyyy");
 
             String formattedDate = time.format(formatterTime);
             textTime.setText(formattedDate);
